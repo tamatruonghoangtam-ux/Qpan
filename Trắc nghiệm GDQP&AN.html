@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trắc nghiệm GDQP&AN</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1d2330;--mu:#6b7385;--bd:#d9dde5;--ok:#1e8e4e;--okb:#e3f5ea;--no:#c62f3b;--nob:#fbe6e8;--ac:#2b5fd9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171d;--card:#1d222b;--tx:#e8ebf1;--mu:#9aa3b5;--bd:#333a47;--ok:#58d08a;--okb:#16301f;--no:#ff7b86;--nob:#3a1a1e;--ac:#7ea2ff}}
+:root[data-theme="dark"]{--bg:#14171d;--card:#1d222b;--tx:#e8ebf1;--mu:#9aa3b5;--bd:#333a47;--ok:#58d08a;--okb:#16301f;--no:#ff7b86;--nob:#3a1a1e;--ac:#7ea2ff}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,sans-serif}
+main{max-width:680px;margin:0 auto;padding:12px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:8px}
+h1{font-size:18px;margin:0}
+.sc{font-weight:600;color:var(--ac)}
+button.r{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:8px 12px;font:inherit}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin:10px 0}
+.q b{display:block;margin-bottom:8px}
+.o{display:block;width:100%;text-align:left;background:transparent;color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:9px 10px;margin:6px 0;font:inherit}
+.o.ok{background:var(--okb);border-color:var(--ok);color:var(--ok)}
+.o.no{background:var(--nob);border-color:var(--no);color:var(--no)}
+</style></head><body><main>
+<header><h1>Trắc nghiệm GDQP&amp;AN</h1><span class="sc" id="sc"></span><button class="r" onclick="go()">Làm lại</button></header>
+<div id="l"></div></main>
+<script>
+const D=`Khu vực biên giới trên không có chiều rộng bao nhiêu tính từ biên giới quốc gia trở vào?|10 km|5 km|12 km|20 km
+Khu vực biên giới trên đất liền gồm:|Xã, phường có một phần địa giới hành chính trùng với biên giới quốc gia|Chỉ các huyện giáp biên giới|Chỉ các tỉnh giáp biên giới|Toàn bộ vùng cách biên giới 10 km
+Công ước Liên hợp quốc về Luật Biển được công bố ngày nào?|10/12/1982|16/11/1994|23/6/1994|10/12/1994
+Công ước Luật Biển 1982 chính thức có hiệu lực từ ngày:|16/11/1994|10/12/1982|23/6/1994|16/11/1982
+Công ước Luật Biển 1982 gồm:|17 phần, 320 điều, 9 phụ lục|15 phần, 300 điều, 8 phụ lục|17 phần, 300 điều, 9 phụ lục|20 phần, 320 điều, 7 phụ lục
+Quốc hội khoá IX phê chuẩn Công ước Luật Biển 1982 vào ngày:|23/6/1994|21/6/1994|10/12/1982|16/11/1994
+Luật Biển Việt Nam năm 2012 gồm:|7 chương, 55 điều|9 chương, 62 điều|4 chương, 19 điều|7 chương, 62 điều
+Lãnh hải có chiều rộng bao nhiêu tính từ đường cơ sở ra phía biển?|12 hải lí|24 hải lí|200 hải lí|350 hải lí
+Vùng tiếp giáp lãnh hải rộng bao nhiêu tính từ ranh giới ngoài lãnh hải?|12 hải lí|24 hải lí|188 hải lí|200 hải lí
+Vùng đặc quyền kinh tế có chiều rộng bao nhiêu tính từ đường cơ sở?|200 hải lí|188 hải lí|350 hải lí|12 hải lí
+Ranh giới ngoài thềm lục địa cách đường cơ sở không quá:|350 hải lí|200 hải lí|338 hải lí|188 hải lí
+Nội thuỷ là vùng nước:|Tiếp giáp bờ biển, ở phía trong đường cơ sở|Nằm ngoài lãnh hải|Nằm giữa lãnh hải và vùng đặc quyền kinh tế|Ở phía ngoài đường cơ sở 12 hải lí
+Biên giới quốc gia trong lòng đất là:|Mặt thẳng đứng từ biên giới trên đất liền và trên biển xuống lòng đất|Mặt thẳng đứng từ biên giới lên vùng trời|Đường cơ sở dưới đáy biển|Ranh giới ngoài thềm lục địa
+Biên giới quốc gia trên đất liền được hoạch định và đánh dấu bằng:|Hệ thống mốc quốc giới|Toạ độ trên hải đồ|Đường cơ sở|Biển báo khu vực biên giới
+Luật Biên giới quốc gia được ban hành năm nào?|2003|2012|2015|1994
+Ngày Biên phòng toàn dân là ngày:|3/3|3/1|30/4|22/12
+Đảo Song Tử Tây thuộc quần đảo nào của nước ta?|Trường Sa|Hoàng Sa|Thổ Chu|Côn Đảo
+Luật Nghĩa vụ quân sự năm 2015 gồm:|9 chương, 62 điều|7 chương, 55 điều|4 chương, 19 điều|9 chương, 55 điều
+Độ tuổi đăng kí nghĩa vụ quân sự lần đầu của công dân nam là:|Đủ 17 tuổi trở lên|Đủ 18 tuổi trở lên|Đủ 16 tuổi trở lên|Đủ 20 tuổi trở lên
+Công dân nữ đăng kí nghĩa vụ quân sự khi:|Đủ 18 tuổi trở lên, có ngành nghề chuyên môn phù hợp yêu cầu của Quân đội|Đủ 17 tuổi trở lên|Đủ 20 tuổi trở lên, mọi ngành nghề|Đủ 18 tuổi, không cần chuyên môn
+Độ tuổi gọi nhập ngũ của công dân là:|Từ đủ 18 đến hết 25 tuổi|Từ đủ 17 đến hết 25 tuổi|Từ đủ 18 đến hết 27 tuổi|Từ đủ 20 đến hết 27 tuổi
+Công dân đào tạo cao đẳng, đại học đã được tạm hoãn thì gọi nhập ngũ đến hết:|27 tuổi|25 tuổi|26 tuổi|30 tuổi
+Thời hạn phục vụ tại ngũ trong thời bình của hạ sĩ quan, binh sĩ là:|24 tháng|18 tháng|12 tháng|36 tháng
+Bộ trưởng Bộ Quốc phòng được kéo dài thời hạn phục vụ tại ngũ nhưng không quá:|06 tháng|03 tháng|12 tháng|24 tháng
+Dân quân thường trực phục vụ ít nhất bao lâu thì được công nhận hoàn thành nghĩa vụ quân sự tại ngũ?|24 tháng|12 tháng|36 tháng|18 tháng
+Công an xã hoàn thành nhiệm vụ liên tục từ đủ bao lâu thì được công nhận hoàn thành nghĩa vụ quân sự tại ngũ?|36 tháng|24 tháng|12 tháng|48 tháng
+Trường hợp nào được MIỄN gọi nhập ngũ?|Con của liệt sĩ|Đang học đại học hệ chính quy|Là lao động duy nhất nuôi thân nhân|Anh hoặc em ruột là hạ sĩ quan đang phục vụ tại ngũ
+Một con của bệnh binh suy giảm khả năng lao động từ bao nhiêu % trở lên thì được miễn gọi nhập ngũ?|81%|61%|71%|50%
+Một con của bệnh binh suy giảm khả năng lao động từ 61% đến 80% thuộc diện:|Tạm hoãn gọi nhập ngũ|Miễn gọi nhập ngũ|Không được đăng kí nghĩa vụ quân sự|Bắt buộc nhập ngũ
+Hồ sơ đăng kí nghĩa vụ quân sự lần đầu gồm:|Phiếu tự khai sức khoẻ NVQS và bản chụp CCCD hoặc thẻ căn cước|Giấy khai sinh và học bạ|Sổ hộ khẩu và bằng tốt nghiệp|Đơn xin nhập ngũ và giấy khám sức khoẻ
+Chủ tịch UBND cấp xã quyết định gọi công dân đăng kí nghĩa vụ quân sự lần đầu vào:|Tháng Tư hằng năm|Tháng Một hằng năm|Tháng Ba hằng năm|Tháng Chín hằng năm
+Chỉ huy trưởng Ban Chỉ huy quân sự cấp xã báo cáo danh sách công dân nam đủ 17 tuổi vào:|Tháng Một hằng năm|Tháng Tư hằng năm|Tháng Bảy hằng năm|Tháng Mười hằng năm
+Đối tượng nào KHÔNG được đăng kí nghĩa vụ quân sự?|Người đã chấp hành xong hình phạt tù nhưng chưa được xoá án tích|Người khuyết tật|Người mắc bệnh tâm thần theo quy định|Người mắc bệnh mạn tính theo quy định
+Nghị định số 218/2025/NĐ-CP quy định:|Xử phạt vi phạm hành chính trong lĩnh vực quốc phòng, cơ yếu|Thực hiện nghĩa vụ tham gia Công an nhân dân|Biên giới quốc gia|Luật Biển Việt Nam
+Phạt 8 000 000 – 10 000 000 đồng đối với hành vi:|Tái phạm không đăng kí nghĩa vụ quân sự lần đầu|Không nhận quyết định gọi sơ tuyển sức khoẻ|Không có mặt đúng thời gian sơ tuyển sức khoẻ|Gian dối làm sai lệch kết quả phân loại sức khoẻ
+Phạt 3 000 000 – 5 000 000 đồng đối với hành vi:|Không có mặt đúng thời gian hoặc địa điểm sơ tuyển sức khoẻ khi không có lí do chính đáng|Không nhận quyết định gọi sơ tuyển sức khoẻ|Tái phạm không đăng kí nghĩa vụ quân sự|Không chấp hành quyết định gọi kiểm tra sức khoẻ
+Phạt 5 000 000 – 8 000 000 đồng đối với hành vi:|Không nhận quyết định gọi sơ tuyển sức khoẻ nghĩa vụ quân sự khi không có lí do chính đáng|Không có mặt đúng thời gian sơ tuyển|Gian dối trong khám sức khoẻ|Không đăng kí nghĩa vụ quân sự lần đầu
+Phạt 15 000 000 – 20 000 000 đồng đối với hành vi:|Không có mặt đúng thời gian hoặc địa điểm khám sức khoẻ nghĩa vụ quân sự|Không nhận quyết định gọi khám sức khoẻ|Không chấp hành quyết định gọi khám|Tái phạm không đăng kí lần đầu
+Phạt 20 000 000 – 30 000 000 đồng đối với hành vi:|Không nhận quyết định gọi khám sức khoẻ nghĩa vụ quân sự|Không có mặt đúng thời gian khám sức khoẻ|Gian dối làm sai lệch kết quả phân loại sức khoẻ|Không chấp hành quyết định gọi kiểm tra
+Phạt 30 000 000 – 40 000 000 đồng đối với hành vi:|Gian dối làm sai lệch kết quả phân loại sức khoẻ để trốn tránh nghĩa vụ quân sự|Không nhận quyết định gọi khám|Không có mặt khám sức khoẻ|Tái phạm không đăng kí lần đầu
+Phạt 50 000 000 – 75 000 000 đồng đối với hành vi:|Không chấp hành quyết định gọi kiểm tra, khám sức khoẻ nghĩa vụ quân sự|Gian dối trong khám sức khoẻ|Không nhận quyết định gọi khám|Không đăng kí nghĩa vụ quân sự
+Nghị định 70/2019/NĐ-CP (sửa đổi bởi NĐ 184/2025/NĐ-CP) gồm:|4 chương, 19 điều|9 chương, 62 điều|7 chương, 55 điều|4 chương, 62 điều
+Thời hạn tiếp nhận hồ sơ đăng kí dự tuyển nghĩa vụ tham gia Công an nhân dân ít nhất là:|30 ngày|10 ngày|15 ngày|60 ngày
+Tuyển chọn nghĩa vụ tham gia CAND yêu cầu bằng tốt nghiệp:|THPT trở lên (xã đặc biệt khó khăn, dân tộc thiểu số: THCS)|Đại học trở lên|THCS cho mọi trường hợp|Không yêu cầu trình độ
+Súng tiểu liên AK dùng đạn kiểu 1943 do nước nào sản xuất?|Liên Xô|Trung Quốc|Việt Nam|Mĩ
+Hộp tiếp đạn của súng tiểu liên AK chứa được bao nhiêu viên đạn?|30 viên|20 viên|40 viên|45 viên
+Tầm bắn thẳng của AK đối với mục tiêu người nằm là:|350 m|525 m|400 m|800 m
+Tầm bắn thẳng của AK đối với mục tiêu người chạy là:|525 m|350 m|500 m|800 m
+Tầm bắn hiệu quả của súng tiểu liên AK là:|400 m|350 m|800 m|500 m
+Tốc độ đầu của đầu đạn súng tiểu liên AK là:|710 m/s|715 m/s|600 m/s|525 m/s
+Tốc độ bắn lí thuyết của súng tiểu liên AK là:|600 phát/phút|100 phát/phút|40 phát/phút|710 phát/phút
+Tốc độ bắn chiến đấu khi bắn phát một của AK khoảng:|40 phát/phút|100 phát/phút|600 phát/phút|30 phát/phút
+Tốc độ bắn chiến đấu khi bắn liên thanh của AK khoảng:|100 phát/phút|40 phát/phút|600 phát/phút|200 phát/phút
+Khối lượng súng tiểu liên AK khi lắp đủ 30 viên đạn là:|4,3 kg|3,8 kg|3,6 kg|3,1 kg
+Cấu tạo súng tiểu liên AK gồm bao nhiêu bộ phận chính?|11 bộ phận|9 bộ phận|10 bộ phận|13 bộ phận
+Loại AK cải tiến nào có báng bằng sắt, gập lại được?|AKMS|AKM|RPD|AK47
+Súng trung liên RPD chỉ bắn được:|Liên thanh|Phát một|Cả liên thanh và phát một|Phát một và loạt ngắn`.split("\n").map(l=>l.split("|"));
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let done,right;
+function go(){done=0;right=0;const L=document.getElementById("l");L.innerHTML="";
+sh(D).forEach((r,n)=>{const q=document.createElement("div");q.className="q";const b=document.createElement("b");b.textContent=(n+1)+". "+r[0];q.append(b);
+sh(r.slice(1)).forEach(t=>{const o=document.createElement("button");o.className="o";o.textContent=t;o.onclick=()=>{
+if(q.dataset.d)return;q.dataset.d=1;done++;
+q.querySelectorAll(".o").forEach(x=>{if(x.textContent===r[1])x.classList.add("ok")});
+if(t===r[1])right++;else o.classList.add("no");sc()};q.append(o)});L.append(q)});sc();scrollTo(0,0)}
+function sc(){document.getElementById("sc").textContent=right+"/"+done+" đúng · "+D.length+" câu"}
+go();
+</script></body></html>
